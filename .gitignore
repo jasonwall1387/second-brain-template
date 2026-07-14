@@ -1,0 +1,28 @@
+# --- Obsidian local state (per-machine, not knowledge) ---
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# --- Secrets & credentials: never commit these ---
+# Keep real secrets in a secrets manager, not in the vault.
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+*token*.png
+*token*.jpg
+*credential*
+*secret*
+secrets/
+private/
+**/one-time-code*.md
+**/*password*.md
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Scratch ---
+outputs/lint-*.md
