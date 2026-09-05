@@ -1,0 +1,19 @@
+# Only these template files may be copied into a vault. One relative path per line.
+.claude/commands/ingest.md
+.claude/commands/lint.md
+.claude/commands/query.md
+.gitignore
+CLAUDE.md
+README.md
+index.md
+log.md
+outputs/README.md
+raw/README.md
+raw/processed/example-northwind-notes.md
+wiki/README.md
+wiki/concepts/example-positioning-thesis.md
+wiki/decisions/2026-01-15-example-pick-obsidian.md
+wiki/entities/example-acme-corp.md
+wiki/entities/example-northwind-consulting.md
+wiki/projects/example-acme-website-refresh.md
+wiki/reference/example-billing-accounts.md
