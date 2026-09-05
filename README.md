@@ -40,6 +40,27 @@ never reproduce secrets - live in [`CLAUDE.md`](CLAUDE.md).
 4. **Look at the `example-` pages** in `wiki/` to see the shape, then delete them.
 5. **Drop your first sources into `raw/`** and run `/ingest`.
 
+To install the scaffold into a separate vault, run `bash install.sh /path/to/MyVault`
+on macOS/Linux, or `powershell -ExecutionPolicy Bypass -File install.ps1 -Destination
+"C:\path\to\MyVault"` on Windows. Add `--skip-git` or `-SkipGit` to skip Git initialization.
+
+The installers copy only paths listed in `scaffold-files.txt`. Unrelated files, private
+notes, and source Git metadata are excluded. Use a clean template checkout; edits to a
+listed scaffold file are still part of what you install. Overlapping source/destination
+trees and linked scaffold paths are rejected. The PowerShell installer also rejects
+junctions or links in the source and destination ancestors.
+
+Existing files are preserved and collisions are listed. Review collisions in `CLAUDE.md`,
+`index.md`, and `.gitignore` before running the commands. **Existing vaults and Git
+checkouts are never staged or committed by the installer.** Only a fresh empty vault
+outside another Git checkout gets an initial commit, containing just the installed
+scaffold files. Review existing notes and ignore rules yourself before tracking them.
+
+Installer regression tests use synthetic temporary vaults: run `node --test` with Node
+18+ and Git available. Windows tests use Windows PowerShell; macOS/Linux tests use Bash
+and also PowerShell when `pwsh` is installed. `POWERSHELL_BIN` can select its executable.
+No Node installation is required to use the installers themselves.
+
 ## The three commands
 
 - `/ingest` - read new sources in `raw/` and fold them into the wiki.
