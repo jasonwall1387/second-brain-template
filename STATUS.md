@@ -6,5 +6,6 @@
   receive an initial commit containing only the newly installed scaffold files.
 - Added regression coverage for private-file exclusion, real Git worktrees, preserved
   commits/indexes, repeat installs, overlap, missing files, and redirected paths.
-- Local Bash and PowerShell 7.6 tests pass. Windows PowerShell verification is pending CI.
+- Regression checks pass locally in Bash and PowerShell 7.6, and in GitHub Actions on
+  Linux (22 checks) and Windows using Windows PowerShell (11 checks), with no skips.
 - Source citation formatting and missing license text remain separate audit items.
